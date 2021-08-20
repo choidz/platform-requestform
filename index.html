@@ -1,0 +1,339 @@
+{@
+$program_set[myreg_code] = $farm_set[myreg_code]; // 맞춤전송폼 코드를 입력해주세요. 대소문자 구분.
+$gp_myreg_form_row = program_load(MYREG_FORM); // 프로그램 호출하여 배열변수에 저장 한다. (항상 마지막에 실행 해야 합니다.)
+@}
+
+
+
+<load target="/img_up/_addon/ui/1.10.3/jquery-ui.js">
+    <load target="/img_up/_addon/ui/1.10.3/themes/smoothness/jquery-ui.css">
+
+
+        <div class="myreg_form__103839__">
+            <form name="myreg_form_myreg5" enctype="multipart/form-data" style="margin:0">
+                <input type="hidden" name="tmp_name" value="tmp_val">
+                <input type="hidden" name="this_domain">
+                <input type="hidden" name="bu_id">
+                <input type="hidden" name="y">
+                <input type="hidden" name="idx">
+                <input type="hidden" name="me_popup">
+                <input type="hidden" name="mode">
+                <input type="hidden" name="myreg_code" value="myreg5">
+                <input type="hidden" name="user_app_subject" value="">
+                <input type="hidden" name="user_app_goods_name" value="">
+                <input type="hidden" name="user_app_price" value="">
+                <input type="hidden" name="post_action" value="">
+                <input type="hidden" name="form_sess_id" value="7go8bbvvfssniqapc0k3367073">
+                <ul>
+                    <li>
+                        <dl>
+                            <dt>이사날짜 </dt>
+                            <dd>
+                                <input class="result" name="s_v1" type="text" id="datepicker_s_v1" placeholder="날짜 선택">
+                            </dd>
+
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>출발지 주소 </dt>
+                            <dd><input type="text"
+                                    style=" background-image: url('\images\searching1.png'); display:none;"
+                                    name="s_v2_1" value="" id="s_v2_zipcode" title="우편번호" size="7" placeholder="주소 검색"
+                                    onclick="javascript:zipcode_search_new('s_v2')">
+                                <input type="text" style=" background-image: url('\images\searching1.png');"
+                                    name="s_v2_2" value="" size="35" title="주소" placeholder="주소 검색"
+                                    onclick="javascript:zipcode_search_new('s_v2')">
+                            </dd>
+                        </dl>
+                        <dl>
+
+
+                            <dd><input data-toggle="modal" data-target="#myModal2" name="fakeSelect1" id="fakeSelect1"
+                                    type="text" value="" placeholder="층수 선택" style="width:90px"></dd>
+                            <div class="modal fade" id="myModal2" tabindex="-1" role="dialog"
+                                aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"
+                                                aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <select name="s_v3" id="s_v3" onChange="getSelectValue1(this.form);"
+                                                style="width:100%!important;">
+                                                <option value="">층수 선택</option>
+                                                <option value="1층"> 1층 </option>
+                                                <option value="2층"> 2층 </option>
+                                                <option value="3층"> 3층 </option>
+                                                <option value="4층"> 4층 </option>
+                                                <option value="5층"> 5층 </option>
+                                                <option value="6층"> 6층 </option>
+                                                <option value="7층"> 7층 </option>
+                                                <option value="8층"> 8층 </option>
+                                                <option value="9층"> 9층 </option>
+                                                <option value="10층"> 10층 </option>
+                                                <option value="11층"> 11층 </option>
+                                                <option value="12층"> 12층 </option>
+                                                <option value="13층"> 13층 </option>
+                                                <option value="14층"> 14층 </option>
+                                                <option value="15층"> 15층 </option>
+                                                <option value="16층"> 16층 </option>
+                                                <option value="17층"> 17층 </option>
+                                                <option value="18층"> 18층 </option>
+                                                <option value="19층"> 19층 </option>
+                                                <option value="20층 이상"> 20층 이상 </option>
+                                            </select>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default"
+                                                data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </dl>
+                    </li>
+
+
+
+
+
+
+
+
+
+                    <li>
+                        <dl>
+                            <dt>도착지 주소 </dt>
+                            <dd><input type="text"
+                                    style=" background-image: url('\images\searching1.png'); display: none;"
+                                    name="s_v4_1" value="" id="s_v4_zipcode" title="우편번호" size="7" placeholder="주소 검색"
+                                    onclick="javascript:zipcode_search_new('s_v4')">
+                                <input type="text" style=" background-image: url('\images\searching1.png');"
+                                    name="s_v4_2" value="" size="35" title="주소" placeholder="주소 검색"
+                                    onclick="javascript:zipcode_search_new('s_v4')">
+                            </dd>
+                        </dl>
+                        <dl>
+
+                            <dd><input data-toggle="modal" data-target="#myModal3" name="fakeSelect2" id="fakeSelect2"
+                                    type="text" placeholder="층수 선택" style="width:90px;"></dd>
+                            </dd>
+                            <div class="modal fade" id="myModal3" tabindex="-1" role="dialog"
+                                aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"
+                                                aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <select name="s_v5" id="s_v5" onChange="getSelectValue2(this.form);"
+                                                style="width:100%!important;">
+                                                <option value="">층수 선택</option>
+                                                <option value="1층"> 1층 </option>
+                                                <option value="2층"> 2층 </option>
+                                                <option value="3층"> 3층 </option>
+                                                <option value="4층"> 4층 </option>
+                                                <option value="5층"> 5층 </option>
+                                                <option value="6층"> 6층 </option>
+                                                <option value="7층"> 7층 </option>
+                                                <option value="8층"> 8층 </option>
+                                                <option value="9층"> 9층 </option>
+                                                <option value="10층"> 10층 </option>
+                                                <option value="11층"> 11층 </option>
+                                                <option value="12층"> 12층 </option>
+                                                <option value="13층"> 13층 </option>
+                                                <option value="14층"> 14층 </option>
+                                                <option value="15층"> 15층 </option>
+                                                <option value="16층"> 16층 </option>
+                                                <option value="17층"> 17층 </option>
+                                                <option value="18층"> 18층 </option>
+                                                <option value="19층"> 19층 </option>
+                                                <option value="20층 이상"> 20층 이상 </option>
+                                            </select>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default"
+                                                data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>업체 전달 메모(선택) </dt>
+                            <dd><textarea name="s_t1" id="s_t1" placeholder="업체에게 전달할 메모가 있다면 작성해 주세요."
+                                    style="width:100%;height:140px;"></textarea> </dd>
+                        </dl>
+                    </li>
+                </ul>
+
+                <div class="submit">
+                    <p class="submitTop">내 조건에 맞는 업체<strong>(최대 3개)</strong>에 비용산정을 위한 <strong style="color:#eec400">무료
+                            견적상담</strong>을 신청합니다</p>
+
+                    <button type="button" onclick="myreg_form_myreg5_chk();">추천업체 바로 신청하기</button>
+                </div>
+
+            </form>
+
+        </div>
+
+        <script type="text/javascript" src="/js/addr_select3.js"></script>
+        <script type="text/javascript" src="/js/addr_select3.js"></script>
+
+
+
+        <script type="text/javascript">
+
+
+
+
+            var zip_var = '';
+            function zipcode_search_new(sel_var) {
+                zip_var = sel_var;
+                var window_left = (screen.width - 640) / 2;
+                var window_top = (screen.height - 480) / 2;
+
+                if (typeof search_zip === 'function') {
+                    search_zip();
+                } else {
+                    var postcodefind = window.open('/shop_popup/zipcode.htm', 'postcodefind', 'resizable=yes,toolbar=no,width=500,height=410,scrollbars=yes,top=' + window_top + ',left=' + window_left + '');
+                    postcodefind.focus();
+                }
+            }
+
+
+            var zipcode_sel_num = '';
+            var addr1_sel_num = '';
+            function zipcode_search(num1, num2) {
+                zipcode_sel_num = num1;
+                addr1_sel_num = num2;
+                zip_var = '';
+
+                var window_left = (screen.width - 640) / 2;
+                var window_top = (screen.height - 480) / 2;
+                var postcodefind = window.open('/shop_popup/zipcode.htm', 'postcodefind', 'resizable=yes,toolbar=no,width=500,height=410,scrollbars=yes,top=' + window_top + ',left=' + window_left + '');
+                postcodefind.focus();
+            }
+
+            function put_postno(No1, No2, add1, add2, note) {
+                if (zip_var != '') {
+                    var obj1 = document.getElementsByName(zip_var + '_1')[0];
+                    var obj2 = document.getElementsByName(zip_var + '_2')[0];
+                } else {
+                    var obj1 = document.getElementsByName('s_v' + zipcode_sel_num)[0];
+                    var obj2 = document.getElementsByName('s_v' + addr1_sel_num)[0];
+                }
+                obj1.value = No1 + '-' + No2;
+                obj2.value = add1 + ' ' + add2;
+            }
+
+            function new_put_postno(zipcode, addr) {
+                if (zip_var != '') {
+                    var obj1 = document.getElementsByName(zip_var + '_1')[0];
+                    var obj2 = document.getElementsByName(zip_var + '_2')[0];
+                } else {
+                    var obj1 = document.getElementsByName('s_v' + zipcode_sel_num)[0];
+                    var obj2 = document.getElementsByName('s_v' + addr1_sel_num)[0];
+                }
+                obj1.value = zipcode;
+                obj2.value = addr;
+            }
+
+        </script>
+
+        <input type="hidden" id="tmp_s_t1" value="">
+        <script type="text/javascript">
+            if (document.getElementById('s_t1')) {
+                document.getElementById('s_t1').value = document.getElementById('tmp_s_t1').value;
+            }
+        </script>
+
+
+        <script>
+            $(function () {
+                $('#datepicker_s_v1').bootstrapMaterialDatePicker({
+                    time: false,
+                    language: "kr",
+                    startDate: 0
+                });
+            });  //bootstrap datepicker 
+        </script>
+
+
+
+
+
+
+        <!-- <script type="text/javascript">
+  
+  
+  
+  
+    $(function() {
+                                var clareCalendar = {
+                                                onSelect: function (dateText, inst) {
+                                                $("#fakeDate").val(dateText); },//fakeDate에 datepicker value 를 넣어줌.
+                                                monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+                                                dayNamesMin: ['일','월','화','수','목','금','토'],
+                                                weekHeader: 'Wk',
+                                                dateFormat: 'yy-mm-dd', //형식(20120303)
+                                                autoSize: false, //오토리사이즈(body등 상위태그의 설정에 따른다)
+                                                changeMonth: false, //월변경가능
+                                                numberOfMonths: [1,2],
+                                                minDate: 0 ,
+                                                altField : "#datepicker_s_v1",
+                                                showMonthAfterYear: true, //년 뒤에 월 표시
+                                                yearRange: '2021:2022' //1990년부터 2020년까지
+                                              
+                                                };
+  
+                                $( '#datepicker_s_v1' ).datepicker(clareCalendar);
+                            }); 
+                            </script> -->
+
+
+        <script type="text/javascript">
+
+
+
+
+            function myreg_form_myreg5_chk() {
+                var form = document.myreg_form_myreg5;
+
+                // if(document.getElementById('myreg_privacy_chk')){
+                // if(form.myreg_privacy_chk.checked == false){
+                // alert("개인정보 취급 방침에 동의 하셔야 합니다.");
+                // form.myreg_privacy_chk.focus();
+                // return;
+                // }
+                // }
+
+
+
+                form.method = 'post';
+
+                var default_action = '/shop_contents/myreg_exec.php';
+                form.action = default_action;
+                form.target = create_iframe();
+
+                if (document.getElementById('div_submit_bt')) {
+                    document.getElementById('div_submit_bt').style.display = 'none';
+                }
+                if (document.getElementById('div_wait_bt')) {
+                    document.getElementById('div_wait_bt').style.display = 'block';
+                }
+
+                form.submit();
+
+            }
+
+        </script>
